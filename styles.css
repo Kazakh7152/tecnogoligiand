@@ -1,0 +1,309 @@
+footer {
+  background-color: var(--header-background);
+  padding: 7rem;
+  text-align: center;
+  color: var(--menu-text-color);
+  position: relative;
+  top: 3500px;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  margin: 8px;
+    
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Стили поисковой системы */
+.search-container {
+  text-align: end;
+  margin-top: 0rem;
+  position: relative;
+  top: -205px;
+  left: -400px;
+  overflow: hidden; /* чтобы скрыть содержимое, выходящее за границы контейнера */
+  white-space: nowrap; /* чтобы текст не переносился на новую строку */
+}
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.search-button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: relative;
+  top: 500px;
+}
+
+.blocks-container {
+  display: flex;
+  justify-content: space-between; /* Это свойство распределяет пространство между блоками равномерно */
+}
+.block1,
+.block2,
+.block3 {
+  background-color: var(--header-background);
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  max-width: 500px;
+  position: relative;
+  top: -130px;
+}
+
+.image {
+  flex: none;
+  width: 300px;
+}
+
+.image img {
+  width: 100%;
+  display: block;
+}
+
+.content1,
+.content2,
+.content3 {
+  flex: 1;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.explore-button1 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.explore-button1:hover {
+  background-color: #0056b3;
+}
+
+.block4,
+.block5,
+.block6 {
+  background-color: var(--header-background);
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  max-width: 500px;
+  position: relative;
+  top: -715px;
+  left: 650px;
+}
+
+.image {
+  flex: none;
+  width: 300px;
+}
+
+.image img {
+  width: 100%;
+  display: block;
+}
+
+.content4,
+.content5,
+.content6 {
+  flex: 1;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.explore-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #0056b3;
+}
+
+.block7,
+.block8,
+.block9 {
+  background-color: var(--header-background);
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  max-width: 500px;
+  position: relative;
+  top: -1318px;
+  left: 1350px;
+}
+
+.image {
+  flex: none;
+  width: 300px;
+}
+
+.image img {
+  width: 100%;
+  display: block;
+}
+
+.content7,
+.content8,
+.content9 {
+  flex: 1;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+.explore-button{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  top: -1100px;
+}
+
+.explore-button:hover {
+  background-color: #0056b3; 
+}
+
+.beautiful-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  position: relative;
+  top: -1100px;
+  background: var(--header-background);
+}
+
+.beautiful-table th, .beautiful-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  background: var(--header-background);
+}
+
+.beautiful-table th {
+  background-color: #f2f2f2;
+  background: var(--header-background);
+}
+
+.beautiful-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+  background: var(--header-background);
+}
+
+.artistic-list {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.artistic-list li:before {
+  content: "\2022";
+  color: #ff0000;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slide 0.5s ease forwards;
+}
+
+#loadTable, #loadList {
+ 
+  position: absolute; /* Нужно для корректного позиционирования при перетаскивании */
+  top: 1700px ; /* Убедитесь, что перетаскиваемый элемент отображается поверх других элементов */
+}
+
+#loadList {
+position: absolute; /* Нужно для корректного позиционирования при перетаскивании */
+top: 1700px ; /* Убедитесь, что перетаскиваемый элемент отображается поверх других элементов */|
+left: 500px;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гаджеты и Технологии-Аккаунт</title>
+    <link rel="stylesheet" href="stylesvoiti.css">
+    <style>
+        :root {
+            --background-color: white;
+            --text-color: black;
+            --header-background: #f0f0f0;
+            --menu-text-color: black;
+            --button-background: #6200ea;
+            --button-text-color: white;
+            --button-hover-background: #3700b3;
+            --login-button-background: #03dac6;
+            --login-button-text-color: black;
+            --login-button-hover-background: #018786;
+            --dropdown-background: #ffffff;
+            --dropdown-hover-background: #eeeeee;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #121212;
+            --text-color: #ffffff;
+            --header-background: #333333;
+            --menu-text-color: #ffffff;
+            --button-background: #bb86fc;
+            --button-text-color: #000000;
+            --button-hover-background: #3700b3;
+            --login-button-background: #03dac6;
+            --login-button-text-color: #000000;
+            --login-button-hover-background: #018786;
+            --dropdown-background: #424242;
+            --dropdown-hover-background: #555555;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--header-background);
+
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            left: -200px;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            color: var(--menu-text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: var(--dropdown-hover-background);
+        }
+
+        .menu li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--dropdown-background);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .dropdown li {
+            width: 200px;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown a:hover {
+            background-color: var(--dropdown-hover-background);
+        }
+
+        .theme-switch {
+            background-color: var(--button-background);
+            color: var(--button-text-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .theme-switch:hover {
+            background-color: var(--button-hover-background);
+        }
+
+        .login-buttons {
+            display: flex;
+            gap: 0.5rem;
+            position: relative;
+            left: 210px;
+        }
+
+        .login-button {
+            background-color: var(--login-button-background);
+            color: var(--login-button-text-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: var(--login-button-hover-background);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Гаджеты и Технологии - Регистрация</h1>
+        <ul class="menu">
+            <li><a href="index.html">Главная</a></li>
+            <li>
+                <a href="#">Категории</a>
+                <ul class="dropdown">
+                    <li><a href="404.html">Смартфоны</a></li>
+                    <li><a href="404.html">Ноутбуки</a></li>
+                
+                </ul>
+            </li>
+            <li><a href="404.html">Контакты</a></li>
+            <li><a href="Blog.html">БЛОГ</a></li>
+        </ul>
+       
+        <button class="theme-switch" onclick="toggleTheme()">Сменить тему</button>
+    </header>
+    <footer style="background-color: var(--header-background); padding: 1rem; text-align: center; color: var(--menu-text-color);">
+        <p>&copy; 2024 Гаджеты и Технологии. Все права защищены.</p>
+        <ul style="list-style: none; display: flex; justify-content: center; gap: 1rem; padding: 0;">
+            <li><a href="#" style="color: var(--menu-text-color); text-decoration: none;">О нас</a></li>
+            <li><a href="#" style="color: var(--menu-text-color); text-decoration: none;">Политика конфиденциальности</a></li>
+            <li><a href="#" style="color: var(--menu-text-color); text-decoration: none;">Контакты</a></li>
+        </ul>
+    </footer>
+      <!-- Поисковая система -->
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Поиск...">
+        <button class="search-button">Найти</button>
+    </div>
+  
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+        }
+    </script>
+<div id="authentication-container">
+    <div class="form">
+      <ul class="tab-group">
+      
+      </ul>
+      <div class="tab-content">
+        <div id="signup">
+          <h1>Регистрация</h1>
+          <form action="/" method="post">
+            <div class="top-row">
+              <div class="field-wrap">
+                <input type="text" required placeholder="First Name" />
+              </div>
+              <div class="field-wrap">
+                <input type="text" required placeholder="Last Name" />
+              </div>
+            </div>
+            <div class="field-wrap">
+              <input type="email" required placeholder="Email Address"/>
+            </div>
+            <div class="field-wrap">
+              <input type="password" required placeholder="Password" />
+            </div>
+            <button type="submit" class="button button-block" />Авторизоваться</button>
+          </form>
+        </div>
+        <div id="login">
+          <h1>Войти</h1>
+          <form action="/" method="post">
+            <div class="field-wrap">
+              <input type="email" required placeholder="Email" />
+            </div>
+            <div class="field-wrap">
+              <input type="password" required placeholder="Password" />
+            </div>
+            <p class="forgot"><a href="">Забыл пароль?</a></p>
+            <button class="button button-block" />Войти</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/main1.js"></script>
+</body>
+</html>
+
+</body>
+</html>

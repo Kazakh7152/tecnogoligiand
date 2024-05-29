@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гаджеты и Технологии</title>
+    <link rel="stylesheet" href="stylesblog.css">
+    <style>
+        :root {
+            --background-color: white;
+            --text-color: black;
+            --header-background: #f0f0f0;
+            --menu-text-color: black;
+            --button-background: #6200ea;
+            --button-text-color: white;
+            --button-hover-background: #3700b3;
+            --login-button-background: #03dac6;
+            --login-button-text-color: black;
+            --login-button-hover-background: #018786;
+            --dropdown-background: #ffffff;
+            --dropdown-hover-background: #eeeeee;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #121212;
+            --text-color: #ffffff;
+            --header-background: #333333;
+            --menu-text-color: #ffffff;
+            --button-background: #bb86fc;
+            --button-text-color: #000000;
+            --button-hover-background: #3700b3;
+            --login-button-background: #03dac6;
+            --login-button-text-color: #000000;
+            --login-button-hover-background: #018786;
+            --dropdown-background: #424242;
+            --dropdown-hover-background: #555555;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--header-background);
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            left: -200px;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            color: var(--menu-text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: var(--dropdown-hover-background);
+        }
+
+        .menu li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--dropdown-background);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .dropdown li {
+            width: 200px;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown a:hover {
+            background-color: var(--dropdown-hover-background);
+        }
+
+        .theme-switch {
+            background-color: var(--button-background);
+            color: var(--button-text-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .theme-switch:hover {
+            background-color: var(--button-hover-background);
+        }
+
+        .login-buttons {
+            display: flex;
+            gap: 0.5rem;
+            position: relative;
+            left: -1px;
+        }
+
+        .login-button {
+            background-color: var(--login-button-background);
+            color: var(--login-button-text-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: var(--login-button-hover-background);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Гаджеты и Технологии - БЛОГ</h1>
+ 
+        <ul class="menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="Blog.html">БЛОГ</a></li>
+            <li>
+                <a href="#">Категории</a>
+                <ul class="dropdown">
+                    <li><a href="404.html">Смартфоны</a></li>
+                    <li><a href="404.html">Ноутбуки</a></li>
+                
+                </ul>
+            </li>
+            <li><a href="404.html">Контакты</a></li>
+         
+        </ul>
+       
+       <div class="login-buttons">
+        <div class="login-buttons">
+            <a href="Voiti.html" class="login-button">Войти</a>
+            <a href="Voiti.html" class="login-button">Авторизация</a>
+    </div>
+        <button class="theme-switch" onclick="toggleTheme()">Сменить тему</button>
+    </header>
+    <footer style="background-color: var(--header-background); padding: 1rem; text-align: center; color: var(--menu-text-color);">
+        <p>&copy; 2024 Гаджеты и Технологии. Все права защищены.</p>
+        <ul style="list-style: none; display: flex; justify-content: center; gap: 1rem; padding: 0;">
+            <li><a href="#" style="color: var(--menu-text-color); text-decoration: none;">О нас</a></li>
+            <li><a href="#" style="color: var(--menu-text-color); text-decoration: none;">Политика конфиденциальности</a></li>
+            <li><a href="#" style="color: var(--menu-text-color); text-decoration: none;">Контакты</a></li>
+        </ul>
+    </footer>
+      <!-- Поисковая система -->
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Поиск...">
+        <button class="search-button">Найти</button>
+    </div>
+    <div class="line"></div>
+    <style>
+        .wide-text {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 100px; /* Измените размер шрифта по желанию */
+            line-height: 1.6; /* Рекомендуемая высота строки для лучшей читаемости */
+            position: relative;
+            top: 0px;
+            left: 850px;
+        }
+    </style>
+    </head>
+    <body>
+      
+         <span class="wide-text">БЛОГ</span>
+    </body>
+
+    <div class="blog">
+        <div class="conteudo1">
+          <div class="post-info">
+            ПОСТ ОТ KazakhNews
+          </div>
+          <img src="pexels-pok-rie-33563-724921.jpg">
+          <h1> Дроны снова ломаются! </h1>
+          <hr>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+           <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" class="continue-lendo">Read more →</a>
+        </div>
+          <div class="conteudo2">
+          <div class="post-info">
+          Пост от KAZAKHNEWS
+          </div>
+          <img src="https://designculture.com.br/wp-content/uploads/2013/07/14.-flat-design.jpg">
+          <h1> Расспродажа от наших партнеров! </h1>
+          <hr>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+           <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+            <a href="#" class="continue-lendo">Read more →</a>
+            <div class="blog">
+              <div class="conteudo3">
+                <div class="post-info">
+                  ПОСТ ОТ KazakhNews
+                </div>
+                <img src="pexels-pok-rie-33563-724921.jpg">
+                <h1> Дроны снова ломаются! </h1>
+                <hr>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                 <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <a href="#" class="continue-lendo">Read more →</a>
+              </div>
+              <div class="blog">
+                <div class="conteudo4">
+                  <div class="post-info">
+                    ПОСТ ОТ KazakhNews
+                  </div>
+                  <img src="pexels-pok-rie-33563-724921.jpg">
+                  <h1> Дроны снова ломаются! </h1>
+                  <hr>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                   <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <a href="#" class="continue-lendo">Read more →</a>
+                </div>
+                <div class="blog">
+                  <div class="conteudo5">
+                    <div class="post-info">
+                      ПОСТ ОТ KazakhNews
+                    </div>
+                    <img src="pexels-pok-rie-33563-724921.jpg">
+                    <h1> Дроны снова ломаются! </h1>
+                    <hr>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                     <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <a href="#" class="continue-lendo">Read more →</a>
+                  </div>
+                  <div class="blog">
+                    <div class="conteudo6">
+                      <div class="post-info">
+                        ПОСТ ОТ KazakhNews
+                      </div>
+                      <img src="pexels-pok-rie-33563-724921.jpg">
+                      <h1> Дроны снова ломаются! </h1>
+                      <hr>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                       <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                      <a href="#" class="continue-lendo">Read more →</a>
+                    </div>
+                    
+        </div>
+        </div>
+      </div>
+
+      
+
+    <!-- Остальное содержимое страницы -->
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+        }
+    </script>
+
+</body>
+</html>

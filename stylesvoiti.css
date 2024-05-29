@@ -1,0 +1,171 @@
+footer {
+    background-color: var(--header-background);
+    padding: 7rem;
+    text-align: center;
+    color: var(--menu-text-color);
+    position: relative;
+    top: 800px;
+  }
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  
+  body{
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    margin: 8px;
+      
+  }
+  
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  /* Стили поисковой системы */
+  .search-container {
+    text-align: end;
+    margin-top: 0rem;
+    position: relative;
+    top: -205px;
+    left: -200px;
+    overflow: hidden; /* чтобы скрыть содержимое, выходящее за границы контейнера */
+    white-space: nowrap; /* чтобы текст не переносился на новую строку */
+  }
+  .search-input {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 300px;
+      max-width: 100%;
+      box-sizing: border-box;
+  }
+  .search-button {
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  #authentication-container {
+    width: 100%;
+    max-width: 600px; /* Примерна ширина, можете да настроите според вашите изисквания */
+    margin: 0 auto; /* Центрира контейнера хоризонтално */
+    position: relative;
+    top: -100px;
+    background-color: var(--header-background);
+  }
+  
+  #authentication-container .form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-background);
+  }
+  
+  #authentication-container .tab-group {
+    margin-bottom: 20px;
+    background-color: var(--header-background);
+  }
+  
+  #authentication-container .tab {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: var(--header-background);
+  }
+  
+  #authentication-container .tab a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: var(--header-background);
+  }
+  
+  #authentication-container .tab-content {
+    margin-top: 20px;
+  }
+  
+  #authentication-container h1 {
+    margin-top: 0;
+  }
+  
+  #authentication-container form {
+    margin-bottom: 0;
+  }
+  
+  #authentication-container input[type="text"],
+  #authentication-container input[type="email"],
+  #authentication-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #authentication-container .button-block {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #authentication-container .button-block:hover {
+    background: #0056b3;
+  }
+  
+  #authentication-container .forgot {
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  #authentication-container .forgot a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  #authentication-container .forgot a:hover {
+    text-decoration: underline;
+  }
